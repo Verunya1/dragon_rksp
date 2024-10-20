@@ -23,8 +23,8 @@ public class ChannelController {
     }
 
     @PostMapping("/exp")
-    public Flux<Dragon> addDragonsMultiple(@RequestBody DragonListWrapper catListWrapper) {
-        List<Dragon> dragonList = catListWrapper.getDragons();
+    public Flux<Dragon> addDragonsMultiple(@RequestBody DragonListWrapper dragonListWrapper) {
+        List<Dragon> dragonList = dragonListWrapper.getDragons();
         Flux<Dragon> dragons = Flux.fromIterable(dragonList);
         return rSocketRequester
                 .route("dragonChannel")

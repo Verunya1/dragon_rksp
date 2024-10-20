@@ -35,7 +35,7 @@ public class MainSocketController {
         dragonRepository.delete(Dragon);
         return Mono.empty();
     }
-    @MessageMapping("DragonChannel")
+    @MessageMapping("dragonChannel")
     public Flux<Dragon> DragonChannel(Flux<Dragon> Dragons){
 // block()/blockFirst()/blockLast() are blocking, which is not supported in thread reactor-http-nio-3
 // return Flux.fromIterable(DragonRepository.saveAll(Dragons.collectList().block()));

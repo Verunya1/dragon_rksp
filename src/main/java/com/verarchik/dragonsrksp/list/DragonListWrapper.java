@@ -12,7 +12,7 @@ public class DragonListWrapper {
         return dragons;
     }
 
-    public void setCats(List<Dragon> dragons) {
+    public void setDragons(List<Dragon> dragons) {
         this.dragons = dragons;
     }
 }
